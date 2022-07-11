@@ -1,0 +1,17 @@
+.wrapper{
+    /* outline: 2px solid red; */
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    /* outline: 2px solid red; */
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+}

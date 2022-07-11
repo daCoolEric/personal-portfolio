@@ -1,0 +1,30 @@
+.container {
+    /* outline: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerIn {
+    /* outline: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    width: 25vw;
+}
+
+.button {
+    /* outline: 2px solid red; */
+    height: 10vh;
+    width: 7vw;
+}
+
+.span {
+    /* outline: 2px solid red; */
+    font-size: 80px;
+}
+
+
+

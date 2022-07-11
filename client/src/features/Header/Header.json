@@ -1,0 +1,23 @@
+[
+    {
+        "intro": "Hi, I'm Eric!",
+        "role": "WEB DEVELOPER & GRAPHIC DESIGNER.",
+        "body": "A multi-disciplinary designer with well developed knowledge in full stack development. A creative design director on the team behind grinbox.me. I have an excellent work ethic."
+
+    },
+    {
+        "intro": "I build value by design.",
+        "body": { "paragraph1": "I’m Eric Kodzo Ayi, but you can just call me Eric.",
+         "paragraph2": "Originally hailing from Ghana. For the past 5 years, I’ve been honing my skills in UI/UX design, graphic design, web development, social media marketing and software development.",
+          "paragraph3": "I strive to create elegant solutions that surprise and delight users, while keeping complex technical dependencies in mind for implementation, scalability and developer sanity.",
+          "paragraph4":
+          "I am so passionate about using software programs to solve societal problems. I believe when I dive deep into technology I will reach the forces that shape the very essence of our lives. In contemporary conditions, I find myself greatly influenced by distributed systems and embedded systems. I'm also interested in data structures and algorithms for solving social problems, design patterns, and clean coding.",
+          "paragraph5":
+          "My current experience enables me to build from scratch webpages, web apps and native apps using HTML, CSS JavaScript, React.js, Redux, Node.js, Express.js and many more. I'm a very vivid visualizer who believe that if you can see it, you can create it. I spend most of my time thinking and visualizing the solution to a problem before I start coding or implementing it.",
+          "paragraph6":
+          "Interested in examining my works? Check them out"}
+    },
+    {
+
+    }
+]

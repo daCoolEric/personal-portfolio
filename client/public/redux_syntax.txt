@@ -1,0 +1,111 @@
+Inside the index.js file
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import store from './app/store';
+import { Provider } from 'react-redux';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+<Provider store={store}>
+<App />
+</Provider>
+ 
+);
+
+
+-----------------------------------------------------------------------------------
+
+Inside the App.js file
+
+import { Counter } from "./features/counter/Counter";
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello World</h1>
+      <Counter />
+    </div>
+  );
+}
+
+export default App;
+
+----------------------------------------------------------------------------------------
+
+Inside the counterSlice.js file
+
+import { createSlice } from '@reduxjs/toolkit'
+
+export const counterSlice = createSlice({
+  name: 'counter',
+  initialState: {
+    value: 0,
+  },
+  reducers: {
+    increment: (state) => {
+      state.value += 1
+    },
+    decrement: (state) => {
+      state.value -= 1
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload
+    },
+  },
+})
+
+// Action creators are generated for each case reducer function
+export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export default counterSlice.reducer
+
+
+-----------------------------------------------------------------------------------
+
+Inside the app/store.js file
+
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from '../features/counter/counterSlice'
+
+export default configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+})
+
+------------------------------------------------------------------------------------
+
+Inside the Counter.js file
+
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from './counterSlice'
+// import styles from './Counter.module.css'
+
+export function Counter() {
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
+
+  return (
+    <div>
+      <div>
+        <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          Increment
+        </button>
+        <span>{count}</span>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement
+        </button>
+      </div>
+    </div>
+  )
+}
+
