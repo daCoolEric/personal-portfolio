@@ -1,10 +1,9 @@
 import React from "react";
-import HeaderStyle from "./Header.module.css";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import HeaderInfo from "./Header.json";
 import profilePic from "../../images/eric-420px.png";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 function Header() {
   return (
@@ -16,9 +15,10 @@ function Header() {
           display: "flex",
           justifyContent: "center",
           paddingTop: "70px",
-          paddingBottom: "70px",
+          paddingBottom: "10px",
         }}
       >
+        {/* Desktop view */}
         <Box
           display={{ xs: "none", md: "flex" }}
           flexDirection="row"
@@ -116,16 +116,16 @@ function Header() {
             </Box>
           </Box>
         </Box>
+        {/* Mobile view */}
         <Box
           display={{ xs: "flex", md: "none" }}
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          sx={
-            {
-              //outline: "2px solid blue",
-            }
-          }
+          sx={{
+            //outline: "2px solid blue",
+            height: "100%",
+          }}
         >
           <Box id="imageContainer">
             <Box
@@ -148,6 +148,7 @@ function Header() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
+              flexGrow: "1",
             }}
           >
             <Box
@@ -169,29 +170,45 @@ function Header() {
               >
                 {HeaderInfo[0].intro}
               </Typography>
-              <Typography
-                variant="h1"
+              <Box
                 sx={{
-                  //outline: "2px solid red",
-                  maxWidth: "312px",
-                  fontSize: 30,
-                  fontWeight: 700,
-                  margin: "0 auto",
+                  //outline: "2px solid green",
+                  display: "flex",
                 }}
               >
-                {HeaderInfo[0].role}
-              </Typography>
+                <Typography
+                  variant="h1"
+                  sx={{
+                    //outline: "2px solid red",
+                    width: "80%",
+                    fontSize: 30,
+                    fontWeight: 700,
+                    margin: "0 auto",
+                    marginBottom: "10px",
+                    flexShrink: 2,
+                  }}
+                >
+                  {HeaderInfo[0].role}
+                </Typography>
+              </Box>
             </Box>
-            <Box>
+            <Box
+              sx={{
+                // outline: "2px solid blue",
+                display: "flex",
+                marginBottom: "10px",
+              }}
+            >
               <Typography
                 variant="h2"
                 sx={{
+                  //outline: "2px solid red",
+                  width: "80%",
                   fontSize: 20,
                   my: 2,
                   letterSpacing: 0.5,
+                  margin: "0 auto",
                   //color: "#222",
-                  display: "flex",
-                  justifyContent: "center",
                 }}
               >
                 {HeaderInfo[0].body}
@@ -199,24 +216,26 @@ function Header() {
             </Box>
             <Box
               sx={{
-                //outline: "2px solid red",
+                // outline: "2px solid red",
                 display: "flex",
-                justifyContent: "flex-start",
+                justifyContent: "center",
                 width: "100%",
               }}
             >
               <Box
                 sx={{
-                  //outline: "2px solid red",
+                  // outline: "2px solid red",
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "space-between",
-                  width: "300px",
+                  width: "80%",
+                  flexWrap: "wrap",
                 }}
               >
                 <Button
                   sx={{
                     color: "#FFF",
+                    marginBottom: "10px",
                     backgroundColor: "#FF6464",
                     ":hover": {
                       color: "#FFF",
@@ -229,6 +248,7 @@ function Header() {
                 <Button
                   sx={{
                     color: "#FFF",
+                    marginBottom: "10px",
                     backgroundColor: "#02ba5e",
                     ":hover": {
                       color: "#FFF",

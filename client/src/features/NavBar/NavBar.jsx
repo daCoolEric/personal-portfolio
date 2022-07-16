@@ -17,18 +17,24 @@ const NavBar = () => {
     <>
       <AppBar
         position="fixed"
-        sx={{ backgroundColor: "#fff", boxShadow: "none" }}
+        sx={{
+          backgroundColor: "#fff",
+          boxShadow: "none",
+          //outline: "2px solid red",
+          boxSizing: "border-box",
+        }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Toolbar
             disableGutters
             sx={{
-              //outline: "2px solid red",
+              //outline: "2px solid green",
               display: "flex",
               justifyContent: "space-between",
+              width: "100%",
             }}
           >
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box sx={{ display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"

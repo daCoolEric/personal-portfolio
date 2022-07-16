@@ -1,5 +1,6 @@
 import React from "react";
 import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 
 function BlogCard() {
   return (
@@ -7,18 +8,19 @@ function BlogCard() {
       <Paper
         elevation={5}
         sx={{
+          // outline: "2px solid blue",
           width: "80%",
-          height: "90%",
+          height: "270px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "25px 25px",
         }}
       >
-        <div>Title</div>
-        <div>12 Feb 2020 | Design, Pattern</div>
-        <div
-          style={{
+        <Box>Title</Box>
+        <Box>12 Feb 2020 | Design, Pattern</Box>
+        <Box
+          sx={{
             // outline: "2px solid red",
             height: "65%",
           }}
@@ -27,8 +29,17 @@ function BlogCard() {
           aliquid magnam laboriosam vitae ut, rerum expedita suscipit nisi
           reprehenderit eveniet est fuga voluptas repellat assumenda, culpa et
           sequi exercitationem qui.
-        </div>
-        <div style={{ color: "#00A8CC", cursor: "pointer" }}>Read more...</div>
+        </Box>
+        <Box
+          sx={{
+            color: "#00A8CC",
+            cursor: "pointer",
+            xs: { marginTop: "10px" },
+            md: { marginTop: "0px" },
+          }}
+        >
+          Read more...
+        </Box>
       </Paper>
     </>
   );

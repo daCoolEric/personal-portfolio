@@ -7,10 +7,11 @@ import About from "./pages/About/About";
 import Footer from "./features/Footer/Footer";
 import Works from "./pages/Works/Works";
 import WorkDetail from "./pages/Works/WorkDetail";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       {/* <Counter /> */}
       <NavBar />
       {/* <NavBarTest /> */}

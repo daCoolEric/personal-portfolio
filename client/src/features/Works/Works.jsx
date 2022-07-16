@@ -26,7 +26,7 @@ function Works() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
-            width: "100%",
+            width: "85%",
           }}
         >
           <Box style={{ color: "#21243D" }}>Featured Works</Box>
