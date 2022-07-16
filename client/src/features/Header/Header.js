@@ -186,6 +186,7 @@ function Header() {
                     margin: "0 auto",
                     marginBottom: "10px",
                     flexShrink: 2,
+                    textAlign: "center",
                   }}
                 >
                   {HeaderInfo[0].role}
