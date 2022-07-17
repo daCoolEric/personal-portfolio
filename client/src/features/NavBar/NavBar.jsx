@@ -9,10 +9,24 @@ import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
 
-const pages = ["About", "Works", "Blog", "Contact"];
+const pages = [
+  { name: "About", link: "/about" },
+  { name: "Works", link: "/works" },
+  { name: "Blog", link: "/blog" },
+  { name: "Contact", link: "/contact" },
+];
 
 const NavBar = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <>
       <AppBar
@@ -35,37 +49,128 @@ const NavBar = () => {
             }}
           >
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
+              {/* menu-logic */}
+
               <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
+                onClick={handleClick}
+                size="small"
+                sx={{ ml: 0 }}
+                aria-controls={open ? "menu" : undefined}
                 aria-haspopup="true"
-                color="inherit"
+                aria-expanded={open ? "true" : undefined}
               >
                 <MenuIcon sx={{ color: "black" }} />
               </IconButton>
+
               <Menu
-                id="menu-appbar"
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
+                anchorEl={anchorEl}
+                id="menu"
+                open={open}
+                onClose={handleClose}
+                onClick={handleClose}
+                PaperProps={{
+                  elevation: 0,
+                  sx: {
+                    overflow: "visible",
+                    filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                    mt: 1.5,
+                    width: "300px",
+                    "& .MuiAvatar-root": {
+                      width: 32,
+                      height: 32,
+                      ml: -0.5,
+                      mr: 1,
+                    },
+                    "&:before": {
+                      content: '""',
+                      display: "block",
+                      position: "absolute",
+                      top: 0,
+                      right: 14,
+                      width: 10,
+                      height: 10,
+                      bgcolor: "background.paper",
+                      transform: "translateY(50%) rotate(45deg)",
+                      zIndex: 0,
+                    },
+                  },
                 }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
+                transformOrigin={{ horizontal: "right", vertical: "top" }}
+                anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
+                <MenuItem>
+                  {" "}
+                  <Link
+                    href="/"
+                    color="black"
+                    underline="none"
+                    sx={{
+                      textAlign: "center",
+                      width: "100%",
+                    }}
+                  >
+                    Home{" "}
+                  </Link>{" "}
+                </MenuItem>
+                <MenuItem>
+                  {" "}
+                  <Link
+                    href="/about"
+                    color="black"
+                    underline="none"
+                    sx={{
+                      textAlign: "center",
+                      width: "100%",
+                    }}
+                  >
+                    About{" "}
+                  </Link>{" "}
+                </MenuItem>
+                <MenuItem>
+                  {" "}
+                  <Link
+                    href="/works"
+                    color="black"
+                    underline="none"
+                    sx={{
+                      textAlign: "center",
+                      width: "100%",
+                    }}
+                  >
+                    Works{" "}
+                  </Link>{" "}
+                </MenuItem>
+                <MenuItem>
+                  {" "}
+                  <Link
+                    href="/blog"
+                    color="black"
+                    underline="none"
+                    sx={{
+                      textAlign: "center",
+                      width: "100%",
+                    }}
+                  >
+                    Blog{" "}
+                  </Link>{" "}
+                </MenuItem>
+                <MenuItem>
+                  {" "}
+                  <Link
+                    href="/contact"
+                    color="black"
+                    underline="none"
+                    sx={{
+                      textAlign: "center",
+                      width: "100%",
+                    }}
+                  >
+                    Contact{" "}
+                  </Link>{" "}
+                </MenuItem>
               </Menu>
             </Box>
+
             <Box
               sx={{
                 //outline: "2px solid red",
@@ -75,33 +180,37 @@ const NavBar = () => {
                 width: "30%",
               }}
             >
-              <Button
-                sx={{
-                  my: 2,
+              <Link href="/" underline="none">
+                <Button
+                  sx={{
+                    my: 2,
 
-                  color: "#FF6464",
-                  display: "block",
-                  fontWeight: "700",
-                  display: { xs: "none", md: "flex" },
-                }}
-              >
-                Home
-              </Button>
+                    color: "#FF6464",
+                    display: "block",
+                    fontWeight: "700",
+                    display: { xs: "none", md: "flex" },
+                  }}
+                >
+                  Home
+                </Button>
+              </Link>
             </Box>
             <Box>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                 {pages.map((page) => (
-                  <Button
-                    key={page}
-                    sx={{
-                      my: 2,
-                      color: "black",
-                      display: "block",
-                      fontWeight: "700",
-                    }}
-                  >
-                    {page}
-                  </Button>
+                  <Link href={page.link} underline="none">
+                    <Button
+                      key={page.name}
+                      sx={{
+                        my: 2,
+                        color: "black",
+                        display: "block",
+                        fontWeight: "700",
+                      }}
+                    >
+                      {page.name}
+                    </Button>
+                  </Link>
                 ))}
               </Box>
             </Box>

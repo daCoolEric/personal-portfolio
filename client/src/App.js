@@ -11,12 +11,14 @@ import Contact from "./pages/Contact/Contact";
 import Blog from "./pages/Blog/Blog";
 import "./App.css";
 import BlogDetail from "./pages/Blog/BlogDetail";
+import AccountMenu from "./features/NavBar/MenuList";
 
 function App() {
   return (
     <div className="app">
       {/* <Counter /> */}
       <NavBar />
+      {/* <AccountMenu /> */}
       {/* <NavBarTest /> */}
 
       <Routes>
