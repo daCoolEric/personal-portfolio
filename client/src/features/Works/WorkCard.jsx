@@ -22,7 +22,7 @@ function WorkCard() {
           elevation={5}
           sx={{
             //outline: "2px solid red",
-            width: "370px",
+            width: "360px",
             height: "100%",
             display: "flex",
             flexDirection: "column",
