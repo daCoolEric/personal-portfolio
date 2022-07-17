@@ -12,13 +12,13 @@ function Blog() {
           Blogs
         </Box>
         <Box id="mobile" sx={{ display: { xs: "flex", md: "none" } }}>
-          <Container
-            maxWidth="xs"
+          <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
+              width: "100%",
             }}
           >
             <BlogCardMobile />
@@ -30,7 +30,7 @@ function Blog() {
             <BlogCardMobile />
             <Divider sx={sx} />
             <BlogCardMobile />
-          </Container>
+          </Box>
         </Box>
         <Box id="desktop" sx={{ display: { xs: "none", md: "flex" } }}>
           <Container

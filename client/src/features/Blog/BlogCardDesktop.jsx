@@ -2,7 +2,7 @@ import React from "react";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 
-function BlogCardMobile() {
+function BlogCardDesktop() {
   return (
     <>
       <Paper
@@ -10,7 +10,7 @@ function BlogCardMobile() {
         sx={{
           // outline: "2px solid blue",
           width: "90%",
-          height: "370px",
+          height: "270px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
@@ -45,4 +45,4 @@ function BlogCardMobile() {
   );
 }
 
-export default BlogCardMobile;
+export default BlogCardDesktop;

@@ -2,16 +2,16 @@ import React from "react";
 
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import BlogCard from "./BlogCard";
+import BlogCardMobile from "./BlogCardMobile";
+import BlogCardDesktop from "./BlogCardDesktop";
 
 function Blog() {
   return (
     <div
-      style={
-        {
-          //outline: "2px solid red",
-        }
-      }
+      style={{
+        //outline: "2px solid red",
+        backgroundColor: "#EDF7FA",
+      }}
     >
       {/* Mobile View */}
       <Box
@@ -19,7 +19,7 @@ function Blog() {
           //outline: "2px solid green",
           height: "90%",
           width: "100%",
-          backgroundColor: "#EDF7FA",
+
           display: { xs: "flex", md: "none" },
           alignItems: "center",
           flexDirection: "column",
@@ -59,7 +59,7 @@ function Blog() {
               justifyContent: "space-evenly",
               alignItems: "center",
               width: "100%",
-              height: "600px",
+              height: "800px",
             }}
           >
             <Box
@@ -68,20 +68,19 @@ function Blog() {
                 display: "flex",
                 justifyContent: "center",
                 width: "400px",
-                height: "300px",
               }}
             >
-              <BlogCard />
+              <BlogCardMobile />
             </Box>
             <Box
               sx={{
-                //outline: "2px solid blue",
+                // outline: "2px solid blue",
                 display: "flex",
                 justifyContent: "center",
                 width: "400px",
               }}
             >
-              <BlogCard />
+              <BlogCardMobile />
             </Box>
           </Box>
         </Box>
@@ -167,7 +166,7 @@ function Blog() {
                   width: "100%",
                 }}
               >
-                <BlogCard />
+                <BlogCardDesktop />
               </Box>
               <Box
                 sx={{
@@ -177,7 +176,7 @@ function Blog() {
                   width: "100%",
                 }}
               >
-                <BlogCard />
+                <BlogCardDesktop />
               </Box>
             </Box>
           </Box>
