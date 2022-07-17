@@ -8,17 +8,17 @@ function BlogDetail() {
     <>
       <Box sx={{ marginTop: "100px" }}>
         <Box id="mobile" sx={{ display: { xs: "flex", md: "none" } }}>
-          <Container
-            maxWidth="xs"
+          <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
+              width: "100%",
             }}
           >
             <SpecificBlogMobile />
-          </Container>
+          </Box>
         </Box>
         <Box id="desktop" sx={{ display: { xs: "none", md: "flex" } }}>
           <Container
