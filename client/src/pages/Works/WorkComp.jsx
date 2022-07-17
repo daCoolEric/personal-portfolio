@@ -1,97 +1,218 @@
 import React from "react";
+import { Box, Container } from "@mui/material";
+import Paper from "@mui/material/Paper";
 import Todo from "../../images/todoApp.png";
 
 function workComp() {
   return (
-    <div
-      style={{
-        // outline: "2px solid red",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-      }}
-    >
-      <div>
-        <img
-          src={Todo}
-          alt=""
-          style={{
-            width: "246px",
-          }}
-        />
-      </div>
-      <div
-        style={{
-          // outline: "2px solid red",
-          width: "70%",
-          display: "flex",
+    <div>
+      {/* Mobile View */}
+      <Container
+        maxWidth="md"
+        sx={{
+          //outline: "2px solid blue",
+          height: "600px",
+          display: { xs: "flex", md: "none" },
+          alignItems: "center",
           flexDirection: "column",
-          justifyContent: "space-evenly",
+          justifyContent: "center",
         }}
       >
-        <div>Title</div>
-        <div
-          style={{
-            // outline: "2px solid red",
+        <Paper
+          elevation={5}
+          sx={{
+            //outline: "2px solid red",
+            width: "370px",
+            height: "100%",
             display: "flex",
-            flexDirection: "row",
-            width: "30%",
+            flexDirection: "column",
             justifyContent: "space-between",
           }}
         >
-          <div
-            style={{
-              // outline: "2px solid red",
-              backgroundColor: "#000",
-              color: "#fff",
-              width: "50px",
+          <Box>
+            <img
+              src={Todo}
+              alt=""
+              style={{
+                width: "100%",
+              }}
+            />
+          </Box>
+
+          <Box
+            sx={{
+              //outline: "2px solid blue",
+              width: "100%",
               display: "flex",
-              justifyContent: "center",
-              borderRadius: "10px",
+              height: "300px",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+              paddingLeft: "15px",
+              paddingRight: "15px",
             }}
           >
-            2020
-          </div>
-          <div
+            <Box>Title</Box>
+            <Box
+              sx={{
+                // outline: "2px solid red",
+                display: "flex",
+                flexDirection: "row",
+                width: "45%",
+                justifyContent: "space-between",
+              }}
+            >
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  backgroundColor: "#000",
+                  color: "#fff",
+                  width: "50px",
+                  display: "flex",
+                  justifyContent: "center",
+                  borderRadius: "10px",
+                }}
+              >
+                2020
+              </Box>
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  display: "flex",
+                  justifyContent: "center",
+                  width: "70%",
+                }}
+              >
+                Dashboard
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                //outline: "2px solid red",
+                height: "65%",
+                width: "90%",
+              }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              mollitia nesciunt magni culpa quidem libero corrupti eius quod
+              maxime porro, aliquam rerum voluptatem molestiae delectus
+              corporis, repellat quaerat excepturi nam.
+            </Box>
+            <Box
+            // style={{
+            //   outline: "2px solid red",
+            // }}
+            >
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  color: "#00A8CC",
+                  width: "35%",
+                  float: "right",
+                  cursor: "pointer",
+                  paddingBottom: "10px",
+                }}
+              >
+                Read more
+              </Box>
+            </Box>
+          </Box>
+        </Paper>
+      </Container>
+
+      {/* Desktop View */}
+      <Paper
+        elevation={5}
+        sx={{
+          width: "100%",
+          height: "246px",
+          display: { xs: "none", md: "flex" },
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
+        <Box>
+          <img
+            src={Todo}
+            alt=""
             style={{
-              // outline: "2px solid red",
-              display: "flex",
-              justifyContent: "center",
-              width: "70%",
+              width: "246px",
             }}
-          >
-            Dashboard
-          </div>
-        </div>
-        <div
-          style={{
+          />
+        </Box>
+
+        <Box
+          sx={{
             // outline: "2px solid red",
-            height: "55%",
+            width: "70%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
           }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-          mollitia nesciunt magni culpa quidem libero corrupti eius quod maxime
-          porro, aliquam rerum voluptatem molestiae delectus corporis, repellat
-          quaerat excepturi nam.
-        </div>
-        <div
-        // style={{
-        //   outline: "2px solid red",
-        // }}
-        >
-          <div
-            style={{
+          <Box>Title</Box>
+          <Box
+            sx={{
               // outline: "2px solid red",
-              color: "#00A8CC",
-              width: "20%",
-              float: "right",
-              cursor: "pointer",
+              display: "flex",
+              flexDirection: "row",
+              width: "30%",
+              justifyContent: "space-between",
             }}
           >
-            Read more...
-          </div>
-        </div>
-      </div>
+            <Box
+              sx={{
+                // outline: "2px solid red",
+                backgroundColor: "#000",
+                color: "#fff",
+                width: "50px",
+                display: "flex",
+                justifyContent: "center",
+                borderRadius: "10px",
+              }}
+            >
+              2020
+            </Box>
+            <Box
+              sx={{
+                // outline: "2px solid red",
+                display: "flex",
+                justifyContent: "center",
+                width: "70%",
+              }}
+            >
+              Dashboard
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              // outline: "2px solid red",
+              height: "55%",
+            }}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            mollitia nesciunt magni culpa quidem libero corrupti eius quod
+            maxime porro, aliquam rerum voluptatem molestiae delectus corporis,
+            repellat quaerat excepturi nam.
+          </Box>
+          <Box
+          // style={{
+          //   outline: "2px solid red",
+          // }}
+          >
+            <Box
+              sx={{
+                // outline: "2px solid red",
+                color: "#00A8CC",
+                width: "20%",
+                float: "right",
+                cursor: "pointer",
+              }}
+            >
+              Read more
+            </Box>
+          </Box>
+        </Box>
+      </Paper>
     </div>
   );
 }

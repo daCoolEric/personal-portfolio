@@ -16,6 +16,8 @@ function Header() {
           justifyContent: "center",
           paddingTop: "70px",
           paddingBottom: "10px",
+          paddingLeft: "0px",
+          paddingRight: "0px",
         }}
       >
         {/* Desktop view */}
@@ -124,6 +126,7 @@ function Header() {
           alignItems="center"
           sx={{
             //outline: "2px solid blue",
+            width: "100%",
             height: "100%",
           }}
         >
@@ -145,6 +148,7 @@ function Header() {
             id="infoContainer"
             sx={{
               //outline: "2px solid yellow",
+              width: "100vw",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -180,7 +184,6 @@ function Header() {
                   variant="h1"
                   sx={{
                     //outline: "2px solid red",
-                    width: "80%",
                     fontSize: 30,
                     fontWeight: 700,
                     margin: "0 auto",
@@ -204,7 +207,7 @@ function Header() {
                 variant="h2"
                 sx={{
                   //outline: "2px solid red",
-                  width: "80%",
+                  width: "90%",
                   fontSize: 20,
                   my: 2,
                   letterSpacing: 0.5,
@@ -229,7 +232,7 @@ function Header() {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "space-between",
-                  width: "80%",
+                  width: "90%",
                   flexWrap: "wrap",
                 }}
               >

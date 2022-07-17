@@ -1,12 +1,11 @@
 import React from "react";
-import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
+import { Container } from "@mui/material";
 
-function BlogCard() {
+function SpecificBlog() {
   return (
     <>
-      <Paper
-        elevation={5}
+      <Box
         sx={{
           // outline: "2px solid blue",
           width: "100%",
@@ -40,9 +39,9 @@ function BlogCard() {
         >
           Read more...
         </Box>
-      </Paper>
+      </Box>
     </>
   );
 }
 
-export default BlogCard;
+export default SpecificBlog;

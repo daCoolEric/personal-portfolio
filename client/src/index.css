@@ -14,7 +14,7 @@ body {
   display: flex;
 }
 #root{
-  outline: 2px solid blue;
+  /* outline: 2px solid blue;  */
   width: 100%;
   flex-grow: 1;
   display: flex;
