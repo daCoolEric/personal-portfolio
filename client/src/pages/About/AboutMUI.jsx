@@ -1,12 +1,13 @@
 import React from "react";
+import Header from "../../features/Header/Header";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import HeaderInfo from "./Header.json";
+import AboutInfo from "./About.json";
 import profilePic from "../../images/eric-420px.png";
 import { Box, Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 
-function Header() {
+function AboutMUI() {
   return (
     <>
       <Container
@@ -15,7 +16,7 @@ function Header() {
           //outline: "2px solid blue",
           display: "flex",
           justifyContent: "center",
-          paddingTop: "70px",
+          paddingTop: "80px",
           paddingBottom: "10px",
           paddingLeft: "0px",
           paddingRight: "0px",
@@ -26,7 +27,6 @@ function Header() {
           display={{ xs: "none", md: "flex" }}
           flexDirection="row"
           justifyContent="space-between"
-          alignItems="center"
           sx={
             {
               //outline: "2px solid red",
@@ -43,19 +43,10 @@ function Header() {
                   my: 2,
                 }}
               >
-                {HeaderInfo[0].intro}
-              </Typography>
-              <Typography
-                variant="h1"
-                sx={{
-                  fontSize: 40,
-                  fontWeight: 700,
-                }}
-              >
-                {HeaderInfo[0].role}
+                {AboutInfo[0].intro}
               </Typography>
             </Box>
-            <Box>
+            <Box sx={{ color: "#555" }}>
               <Typography
                 variant="h2"
                 sx={{
@@ -65,7 +56,62 @@ function Header() {
                   //color: "#222",
                 }}
               >
-                {HeaderInfo[0].body}
+                {AboutInfo[0].body.paragraph1}
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontSize: 20,
+                  my: 2,
+                  letterSpacing: 0.5,
+                  //color: "#222",
+                }}
+              >
+                {AboutInfo[0].body.paragraph2}
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontSize: 20,
+                  my: 2,
+                  letterSpacing: 0.5,
+                  //color: "#222",
+                }}
+              >
+                {AboutInfo[0].body.paragraph3}
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontSize: 20,
+                  my: 2,
+                  letterSpacing: 0.5,
+                  //color: "#222",
+                }}
+              >
+                {AboutInfo[0].body.paragraph4}
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontSize: 20,
+                  my: 2,
+                  letterSpacing: 0.5,
+                  //color: "#222",
+                }}
+              >
+                {AboutInfo[0].body.paragraph5}
+              </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontSize: 20,
+                  my: 2,
+                  letterSpacing: 0.5,
+                  //color: "#222",
+                }}
+              >
+                {AboutInfo[0].body.paragraph6}
               </Typography>
             </Box>
             <Box
@@ -73,7 +119,7 @@ function Header() {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
-                width: "300px",
+                width: "400px",
               }}
             >
               <Button
@@ -86,8 +132,8 @@ function Header() {
                   },
                 }}
               >
-                <Link href="/about" underline="none">
-                  <b>Learn More</b>
+                <Link href="/works" color="#fff" underline="none">
+                  <b>Check them out</b>
                 </Link>
               </Button>
 
@@ -110,6 +156,7 @@ function Header() {
             <Box
               sx={{
                 //outline: "2px solid yellow",
+                height: "100%",
                 width: "50%",
                 display: "flex",
                 justifyContent: "center",
@@ -152,7 +199,7 @@ function Header() {
             id="infoContainer"
             sx={{
               //outline: "2px solid yellow",
-              width: "100vw",
+              width: "95vw",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -166,61 +213,86 @@ function Header() {
                 justifyContent: "center",
               }}
             >
-              <Typography
-                variant="h1"
-                sx={{
-                  fontSize: 30,
-                  fontWeight: 700,
-                  my: 2,
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                {HeaderInfo[0].intro}
-              </Typography>
-              <Box
-                sx={{
-                  //outline: "2px solid green",
-                  display: "flex",
-                }}
-              >
+              <Box sx={{ textAlign: "center" }}>
                 <Typography
                   variant="h1"
                   sx={{
-                    //outline: "2px solid red",
-                    fontSize: 30,
+                    fontSize: 40,
                     fontWeight: 700,
-                    margin: "0 auto",
-                    marginBottom: "10px",
-                    flexShrink: 2,
-                    textAlign: "center",
+                    my: 2,
                   }}
                 >
-                  {HeaderInfo[0].role}
+                  {AboutInfo[0].intro}
                 </Typography>
               </Box>
-            </Box>
-            <Box
-              sx={{
-                // outline: "2px solid blue",
-                display: "flex",
-                marginBottom: "10px",
-              }}
-            >
-              <Typography
-                variant="h2"
-                sx={{
-                  //outline: "2px solid red",
-                  width: "90%",
-                  fontSize: 20,
-                  my: 2,
-                  letterSpacing: 0.5,
-                  margin: "0 auto",
-                  //color: "#222",
-                }}
-              >
-                {HeaderInfo[0].body}
-              </Typography>
+              <Box sx={{ color: "#555" }}>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontSize: 20,
+                    my: 2,
+                    letterSpacing: 0.5,
+                    //color: "#222",
+                  }}
+                >
+                  {AboutInfo[0].body.paragraph1}
+                </Typography>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontSize: 20,
+                    my: 2,
+                    letterSpacing: 0.5,
+                    //color: "#222",
+                  }}
+                >
+                  {AboutInfo[0].body.paragraph2}
+                </Typography>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontSize: 20,
+                    my: 2,
+                    letterSpacing: 0.5,
+                    //color: "#222",
+                  }}
+                >
+                  {AboutInfo[0].body.paragraph3}
+                </Typography>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontSize: 20,
+                    my: 2,
+                    letterSpacing: 0.5,
+                    //color: "#222",
+                  }}
+                >
+                  {AboutInfo[0].body.paragraph4}
+                </Typography>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontSize: 20,
+                    my: 2,
+                    letterSpacing: 0.5,
+                    //color: "#222",
+                  }}
+                >
+                  {AboutInfo[0].body.paragraph5}
+                </Typography>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontSize: 20,
+                    my: 2,
+                    letterSpacing: 0.5,
+                    //color: "#222",
+                  }}
+                >
+                  {AboutInfo[0].body.paragraph6}
+                </Typography>
+              </Box>
             </Box>
             <Box
               sx={{
@@ -236,7 +308,7 @@ function Header() {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "space-between",
-                  width: "90%",
+                  width: "100%",
                   flexWrap: "wrap",
                 }}
               >
@@ -251,8 +323,8 @@ function Header() {
                     },
                   }}
                 >
-                  <Link href="/about" underline="none" color="white">
-                    <b>Learn More</b>
+                  <Link href="/works" color="#fff" underline="none">
+                    <b>Check them out</b>
                   </Link>
                 </Button>
                 <Button
@@ -277,4 +349,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default AboutMUI;

@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../../features/Header/Header";
+import AboutMUI from "./AboutMUI";
 
 function About() {
   return (
     <div>
-      <Header />
+      <AboutMUI />
     </div>
   );
 }

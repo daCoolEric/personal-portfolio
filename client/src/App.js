@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import NavBarTest from "./features/NavBar/NavBarTest.tsx";
 import NavBar from "./features/NavBar/NavBar";
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
+import About from "./pages/About/AboutMUI";
 import Footer from "./features/Footer/Footer";
 import Works from "./pages/Works/Works";
 import WorkDetail from "./pages/Works/WorkDetail";
