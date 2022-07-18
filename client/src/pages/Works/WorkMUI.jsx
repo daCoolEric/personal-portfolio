@@ -1,12 +1,12 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import HeaderInfo from "./Header.json";
+import WorkHeaderInfo from "./WorkHeader.json";
 import profilePic from "../../images/eric-420px.png";
 import { Box, Typography } from "@mui/material";
 import Link from "@mui/material/Link";
 
-function Header() {
+function WorkMUI() {
   return (
     <>
       <Container
@@ -43,16 +43,7 @@ function Header() {
                   my: 2,
                 }}
               >
-                {HeaderInfo[0].intro}
-              </Typography>
-              <Typography
-                variant="h1"
-                sx={{
-                  fontSize: 40,
-                  fontWeight: 700,
-                }}
-              >
-                {HeaderInfo[0].role}
+                {WorkHeaderInfo[0].intro}
               </Typography>
             </Box>
             <Box>
@@ -65,7 +56,7 @@ function Header() {
                   //color: "#222",
                 }}
               >
-                {HeaderInfo[0].body}
+                {WorkHeaderInfo[0].body}
               </Typography>
             </Box>
             <Box
@@ -86,7 +77,7 @@ function Header() {
                   },
                 }}
               >
-                <Link href="/about" underline="none" color="#fff">
+                <Link href="/works/workdetails" underline="none" color="#fff">
                   <b>Learn More</b>
                 </Link>
               </Button>
@@ -164,6 +155,7 @@ function Header() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
+                textAlign: "center",
               }}
             >
               <Typography
@@ -176,29 +168,14 @@ function Header() {
                   justifyContent: "center",
                 }}
               >
-                {HeaderInfo[0].intro}
+                {WorkHeaderInfo[0].intro}
               </Typography>
               <Box
                 sx={{
                   //outline: "2px solid green",
                   display: "flex",
                 }}
-              >
-                <Typography
-                  variant="h1"
-                  sx={{
-                    //outline: "2px solid red",
-                    fontSize: 30,
-                    fontWeight: 700,
-                    margin: "0 auto",
-                    marginBottom: "10px",
-                    flexShrink: 2,
-                    textAlign: "center",
-                  }}
-                >
-                  {HeaderInfo[0].role}
-                </Typography>
-              </Box>
+              ></Box>
             </Box>
             <Box
               sx={{
@@ -219,7 +196,7 @@ function Header() {
                   //color: "#222",
                 }}
               >
-                {HeaderInfo[0].body}
+                {WorkHeaderInfo[0].body}
               </Typography>
             </Box>
             <Box
@@ -251,7 +228,7 @@ function Header() {
                     },
                   }}
                 >
-                  <Link href="/about" underline="none" color="#fff">
+                  <Link href="#" underline="none" color="#fff">
                     <b>Learn More</b>
                   </Link>
                 </Button>
@@ -277,4 +254,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default WorkMUI;
