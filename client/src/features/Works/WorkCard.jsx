@@ -2,13 +2,16 @@ import React from "react";
 import { Box, Container } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Todo from "../../images/todoApp.png";
+import MovieApp from "../../images/movieApp.png";
+import ProductPage from "../../images/productPage.png";
+import WeatherApp from "../../images/weatherApp.png";
 
-function WorkCard() {
+function WorkCard(props) {
   return (
     <>
       {/* Mobile View */}
       <Container
-        maxWidth="md"
+        maxWidth="sm"
         sx={{
           //outline: "2px solid blue",
           height: "600px",
@@ -31,7 +34,17 @@ function WorkCard() {
         >
           <Box>
             <img
-              src={Todo}
+              src={
+                props.id === "1"
+                  ? Todo
+                  : props.id === "2"
+                  ? ProductPage
+                  : props.id === "3"
+                  ? WeatherApp
+                  : props.id === "4"
+                  ? MovieApp
+                  : null
+              }
               alt=""
               style={{
                 width: "100%",
@@ -51,14 +64,32 @@ function WorkCard() {
               paddingRight: "15px",
             }}
           >
-            <Box>Title</Box>
             <Box
               sx={{
-                // outline: "2px solid red",
+                fontWeight: "600",
+                fontSize: "20px",
+              }}
+            >
+              {props.id === "1"
+                ? props.workTitle
+                : props.id === "2"
+                ? props.workTitle
+                : props.id === "3"
+                ? props.workTitle
+                : props.id === "4"
+                ? props.workTitle
+                : null}
+            </Box>
+            <Box
+              sx={{
+                //outline: "2px solid red",
                 display: "flex",
                 flexDirection: "row",
-                width: "45%",
+                width: "95%",
                 justifyContent: "space-between",
+                alignItems: "center",
+                paddingTop: "5px",
+                paddingBottom: "5px",
               }}
             >
               <Box
@@ -67,8 +98,10 @@ function WorkCard() {
                   backgroundColor: "#000",
                   color: "#fff",
                   width: "50px",
+                  height: "25px",
                   display: "flex",
                   justifyContent: "center",
+
                   borderRadius: "10px",
                 }}
               >
@@ -76,13 +109,21 @@ function WorkCard() {
               </Box>
               <Box
                 sx={{
-                  // outline: "2px solid red",
+                  //outline: "2px solid red",
                   display: "flex",
-                  justifyContent: "center",
-                  width: "70%",
+                  justifyContent: "flex-start",
+                  width: "80%",
                 }}
               >
-                Dashboard
+                {props.id === "1"
+                  ? props.workKeywords
+                  : props.id === "2"
+                  ? props.workKeywords
+                  : props.id === "3"
+                  ? props.workKeywords
+                  : props.id === "4"
+                  ? props.workKeywords
+                  : null}
               </Box>
             </Box>
             <Box
@@ -92,10 +133,15 @@ function WorkCard() {
                 width: "90%",
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              mollitia nesciunt magni culpa quidem libero corrupti eius quod
-              maxime porro, aliquam rerum voluptatem molestiae delectus
-              corporis, repellat quaerat excepturi nam.
+              {props.id === "1"
+                ? props.workDesc
+                : props.id === "2"
+                ? props.workDesc
+                : props.id === "3"
+                ? props.workDesc
+                : props.id === "4"
+                ? props.workDesc
+                : null}
             </Box>
             <Box
             // style={{
@@ -120,99 +166,150 @@ function WorkCard() {
       </Container>
 
       {/* Desktop View */}
-      <Paper
-        elevation={5}
+      <Container
+        maxWidth="md"
         sx={{
-          width: "100%",
-          height: "246px",
+          //outline: "2px solid blue",
+
           display: { xs: "none", md: "flex" },
-          flexDirection: "row",
-          justifyContent: "space-between",
         }}
       >
-        <Box>
-          <img
-            src={Todo}
-            alt=""
-            style={{
-              width: "246px",
-            }}
-          />
-        </Box>
-
-        <Box
+        <Paper
+          elevation={5}
           sx={{
-            // outline: "2px solid red",
-            width: "70%",
+            width: "100%",
+            height: "246px",
             display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
+            flexDirection: "row",
+            justifyContent: "space-between",
           }}
         >
-          <Box>Title</Box>
+          <Box>
+            <img
+              src={
+                props.id === "1"
+                  ? Todo
+                  : props.id === "2"
+                  ? ProductPage
+                  : props.id === "3"
+                  ? WeatherApp
+                  : props.id === "4"
+                  ? MovieApp
+                  : null
+              }
+              alt=""
+              style={{
+                width: "246px",
+              }}
+            />
+          </Box>
+
           <Box
             sx={{
-              // outline: "2px solid red",
+              //outline: "2px solid red",
+              width: "70%",
               display: "flex",
-              flexDirection: "row",
-              width: "30%",
-              justifyContent: "space-between",
+              flexDirection: "column",
+              justifyContent: "space-evenly",
+              paddingLeft: "10px",
             }}
           >
             <Box
               sx={{
-                // outline: "2px solid red",
-                backgroundColor: "#000",
-                color: "#fff",
-                width: "50px",
-                display: "flex",
-                justifyContent: "center",
-                borderRadius: "10px",
+                fontWeight: "600",
+                fontSize: "20px",
               }}
             >
-              2020
+              {props.id === "1"
+                ? props.workTitle
+                : props.id === "2"
+                ? props.workTitle
+                : props.id === "3"
+                ? props.workTitle
+                : props.id === "4"
+                ? props.workTitle
+                : null}
+            </Box>
+            <Box
+              sx={{
+                //outline: "2px solid red",
+                display: "flex",
+                flexDirection: "row",
+                width: "80%",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  //outline: "2px solid red",
+                  backgroundColor: "#000",
+                  color: "#fff",
+                  width: "50px",
+                  display: "flex",
+                  justifyContent: "center",
+
+                  borderRadius: "10px",
+                }}
+              >
+                2020
+              </Box>
+              <Box
+                sx={{
+                  //outline: "2px solid green",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  paddingLeft: "10px",
+                  width: "95%",
+                }}
+              >
+                {props.id === "1"
+                  ? props.workKeywords
+                  : props.id === "2"
+                  ? props.workKeywords
+                  : props.id === "3"
+                  ? props.workKeywords
+                  : props.id === "4"
+                  ? props.workKeywords
+                  : null}
+              </Box>
             </Box>
             <Box
               sx={{
                 // outline: "2px solid red",
-                display: "flex",
-                justifyContent: "center",
-                width: "70%",
+                height: "55%",
               }}
             >
-              Dashboard
+              {props.id === "1"
+                ? props.workDesc
+                : props.id === "2"
+                ? props.workDesc
+                : props.id === "3"
+                ? props.workDesc
+                : props.id === "4"
+                ? props.workDesc
+                : null}
             </Box>
-          </Box>
-          <Box
-            sx={{
-              // outline: "2px solid red",
-              height: "55%",
-            }}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            mollitia nesciunt magni culpa quidem libero corrupti eius quod
-            maxime porro, aliquam rerum voluptatem molestiae delectus corporis,
-            repellat quaerat excepturi nam.
-          </Box>
-          <Box
-          // style={{
-          //   outline: "2px solid red",
-          // }}
-          >
             <Box
-              sx={{
-                // outline: "2px solid red",
-                color: "#00A8CC",
-                width: "20%",
-                float: "right",
-                cursor: "pointer",
-              }}
+            // style={{
+            //   outline: "2px solid red",
+            // }}
             >
-              Read more
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  color: "#00A8CC",
+                  width: "20%",
+                  float: "right",
+                  cursor: "pointer",
+                }}
+              >
+                Read more
+              </Box>
             </Box>
           </Box>
-        </Box>
-      </Paper>
+        </Paper>
+      </Container>
     </>
   );
 }

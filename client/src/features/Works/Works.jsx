@@ -1,9 +1,9 @@
 import React from "react";
 import WorkCard from "./WorkCard";
-import WorksStyles from "./Works.module.css";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import { Box } from "@mui/material";
+import WorkData from "./WD.json";
 
 function Works() {
   return (
@@ -13,7 +13,7 @@ function Works() {
         maxWidth="md"
         sx={{
           //outline: "2px solid blue",
-          height: "1970px",
+          height: "2050px",
           display: { xs: "flex", md: "none" },
           alignItems: "center",
           flexDirection: "column",
@@ -34,21 +34,30 @@ function Works() {
         </Box>
         <Box
           sx={{
-            // outline: "2px solid green",
+            //outline: "2px solid green",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
             alignItems: "center",
             width: "100%",
-            height: "1855px",
+            height: "1900px",
           }}
         >
-          <WorkCard />
-          <Divider variant="fullwidth" />
-          <WorkCard />
-          <Divider variant="fullwidth" />
-          <WorkCard />
-          <Divider variant="fullwidth" />
+          {WorkData.map((work) => {
+            return (
+              <>
+                <WorkCard
+                  key={work.id}
+                  id={work.id}
+                  // workImg={work.src}
+                  workTitle={work.title}
+                  workDesc={work.desc}
+                  workKeywords={work.keywords}
+                />
+                <Divider variant="fullwidth" />
+              </>
+            );
+          })}
         </Box>
       </Container>
 
@@ -87,9 +96,21 @@ function Works() {
             height: "800px",
           }}
         >
-          <WorkCard />
-          <WorkCard />
-          <WorkCard />
+          {WorkData.map((work) => {
+            return (
+              <>
+                <WorkCard
+                  key={work.id}
+                  id={work.id}
+                  // workImg={work.src}
+                  workTitle={work.title}
+                  workDesc={work.desc}
+                  workKeywords={work.keywords}
+                />
+                <Divider variant="fullwidth" />
+              </>
+            );
+          })}
         </Box>
       </Container>
     </div>
