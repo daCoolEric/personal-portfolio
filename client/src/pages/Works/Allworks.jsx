@@ -4,6 +4,7 @@ import Divider from "@mui/material/Divider";
 
 import { Container } from "@mui/system";
 import WorkComp from "./WorkComp";
+import WorkData from "./WorkData.json";
 
 export default function MiddleDividers() {
   const sx = { marginTop: "15px", marginBottom: "15px" };
@@ -17,13 +18,29 @@ export default function MiddleDividers() {
         justifyContent: "space-between",
       }}
     >
-      <WorkComp />
+      {WorkData.map((work) => {
+        return (
+          <>
+            <WorkComp
+              key={work.id}
+              id={work.id}
+              workTitle={work.title}
+              workDesc={work.desc}
+              workKeywords={work.keywords}
+              workDate={work.date}
+              workDateColor={work.color}
+            />
+            <Divider variant="middle" sx={sx} />
+          </>
+        );
+      })}
+      {/* <WorkComp />
       <Divider variant="middle" sx={sx} />
       <WorkComp />
       <Divider variant="middle" sx={sx} />
       <WorkComp />
       <Divider variant="middle" sx={sx} />
-      <WorkComp />
+      <WorkComp /> */}
     </Container>
   );
 }

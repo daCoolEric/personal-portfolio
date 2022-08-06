@@ -2,8 +2,14 @@ import React from "react";
 import { Box, Container } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Todo from "../../images/todoApp.png";
+import MovieApp from "../../images/movieApp.png";
+import ProductPage from "../../images/productPage.png";
+import WeatherApp from "../../images/weatherApp.png";
+import Calc from "../../images/calc.png";
+import Graphic from "../../images/graphic.png";
 
-function workComp() {
+function workComp(props) {
+  const color = props.workDateColor;
   return (
     <div>
       {/* Mobile View */}
@@ -31,7 +37,21 @@ function workComp() {
         >
           <Box>
             <img
-              src={Todo}
+              src={
+                props.id === "1"
+                  ? Todo
+                  : props.id === "2"
+                  ? ProductPage
+                  : props.id === "3"
+                  ? WeatherApp
+                  : props.id === "4"
+                  ? MovieApp
+                  : props.id === "5"
+                  ? Calc
+                  : props.id === "6"
+                  ? Graphic
+                  : null
+              }
               alt=""
               style={{
                 width: "100%",
@@ -51,51 +71,132 @@ function workComp() {
               paddingRight: "15px",
             }}
           >
-            <Box>Title</Box>
             <Box
               sx={{
-                // outline: "2px solid red",
-                display: "flex",
-                flexDirection: "row",
-                width: "45%",
-                justifyContent: "space-between",
+                fontWeight: "600",
+                fontSize: "20px",
+                color: { color },
               }}
             >
+              {props.workTitle}
+            </Box>
+            <Box
+              sx={{
+                //outline: "2px solid red",
+                display: "flex",
+                flexDirection: "row",
+                width: "100%",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginTop: "5px",
+                marginBottom: "5px",
+              }}
+            >
+              {props.id === "1" ? (
+                <Box
+                  sx={{
+                    // outline: "2px solid red",
+                    bgcolor: "primary.todo",
+                    color: "#fff",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                    borderRadius: "10px",
+                  }}
+                >
+                  {props.workDate}
+                </Box>
+              ) : props.id === "2" ? (
+                <Box
+                  sx={{
+                    // outline: "2px solid red",
+                    bgcolor: "primary.product",
+                    color: "#fff",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                    borderRadius: "10px",
+                  }}
+                >
+                  {props.workDate}
+                </Box>
+              ) : props.id === "3" ? (
+                <Box
+                  sx={{
+                    // outline: "2px solid red",
+                    bgcolor: "primary.weather",
+                    color: "#fff",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                    borderRadius: "10px",
+                  }}
+                >
+                  {props.workDate}
+                </Box>
+              ) : props.id === "4" ? (
+                <Box
+                  sx={{
+                    // outline: "2px solid red",
+                    bgcolor: "primary.movie",
+                    color: "#fff",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                    borderRadius: "10px",
+                  }}
+                >
+                  {props.workDate}
+                </Box>
+              ) : props.id === "5" ? (
+                <Box
+                  sx={{
+                    // outline: "2px solid red",
+                    bgcolor: "primary.calc",
+                    color: "#fff",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                    borderRadius: "10px",
+                  }}
+                >
+                  {props.workDate}
+                </Box>
+              ) : props.id === "6" ? (
+                <Box
+                  sx={{
+                    // outline: "2px solid red",
+                    bgcolor: "primary.graphic",
+                    color: "#fff",
+                    width: "50px",
+                    display: "flex",
+                    justifyContent: "center",
+                    borderRadius: "10px",
+                  }}
+                >
+                  {props.workDate}
+                </Box>
+              ) : null}
+
               <Box
                 sx={{
-                  // outline: "2px solid red",
-                  backgroundColor: "#000",
-                  color: "#fff",
-                  width: "50px",
+                  //outline: "2px solid red",
                   display: "flex",
-                  justifyContent: "center",
-                  borderRadius: "10px",
+                  justifyContent: "flex-start",
+                  width: "80%",
                 }}
               >
-                2020
-              </Box>
-              <Box
-                sx={{
-                  // outline: "2px solid red",
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "70%",
-                }}
-              >
-                Dashboard
+                <i>{props.workKeywords}</i>
               </Box>
             </Box>
             <Box
               sx={{
                 //outline: "2px solid red",
                 height: "65%",
-                width: "90%",
+                width: "100%",
               }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              mollitia nesciunt magni culpa quidem libero corrupti eius quod
-              maxime porro, aliquam rerum voluptatem molestiae delectus
-              corporis, repellat quaerat excepturi nam.
+              {props.workDesc}
             </Box>
             <Box
             // style={{
@@ -118,7 +219,7 @@ function workComp() {
           </Box>
         </Paper>
       </Container>
-
+      {/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
       {/* Desktop View */}
       <Paper
         elevation={5}
@@ -132,7 +233,21 @@ function workComp() {
       >
         <Box>
           <img
-            src={Todo}
+            src={
+              props.id === "1"
+                ? Todo
+                : props.id === "2"
+                ? ProductPage
+                : props.id === "3"
+                ? WeatherApp
+                : props.id === "4"
+                ? MovieApp
+                : props.id === "5"
+                ? Calc
+                : props.id === "6"
+                ? Graphic
+                : null
+            }
             alt=""
             style={{
               width: "246px",
@@ -149,50 +264,131 @@ function workComp() {
             justifyContent: "space-evenly",
           }}
         >
-          <Box>Title</Box>
+          <Box
+            sx={{
+              fontWeight: "600",
+              fontSize: "20px",
+              color: { color },
+            }}
+          >
+            {props.workTitle}
+          </Box>
           <Box
             sx={{
               // outline: "2px solid red",
               display: "flex",
               flexDirection: "row",
-              width: "30%",
+              width: "100%",
               justifyContent: "space-between",
+              marginTop: "5px",
+              marginBottom: "5px",
             }}
           >
+            {props.id === "1" ? (
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  bgcolor: "primary.todo",
+                  color: "#fff",
+                  width: "50px",
+                  display: "flex",
+                  justifyContent: "center",
+                  borderRadius: "10px",
+                }}
+              >
+                {props.workDate}
+              </Box>
+            ) : props.id === "2" ? (
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  bgcolor: "primary.product",
+                  color: "#fff",
+                  width: "50px",
+                  display: "flex",
+                  justifyContent: "center",
+                  borderRadius: "10px",
+                }}
+              >
+                {props.workDate}
+              </Box>
+            ) : props.id === "3" ? (
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  bgcolor: "primary.weather",
+                  color: "#fff",
+                  width: "50px",
+                  display: "flex",
+                  justifyContent: "center",
+                  borderRadius: "10px",
+                }}
+              >
+                {props.workDate}
+              </Box>
+            ) : props.id === "4" ? (
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  bgcolor: "primary.movie",
+                  color: "#fff",
+                  width: "50px",
+                  display: "flex",
+                  justifyContent: "center",
+                  borderRadius: "10px",
+                }}
+              >
+                {props.workDate}
+              </Box>
+            ) : props.id === "5" ? (
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  bgcolor: "primary.calc",
+                  color: "#fff",
+                  width: "50px",
+                  display: "flex",
+                  justifyContent: "center",
+                  borderRadius: "10px",
+                }}
+              >
+                {props.workDate}
+              </Box>
+            ) : props.id === "6" ? (
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  bgcolor: "primary.graphic",
+                  color: "#fff",
+                  width: "50px",
+                  display: "flex",
+                  justifyContent: "center",
+                  borderRadius: "10px",
+                }}
+              >
+                {props.workDate}
+              </Box>
+            ) : null}
+
             <Box
               sx={{
                 // outline: "2px solid red",
-                backgroundColor: "#000",
-                color: "#fff",
-                width: "50px",
                 display: "flex",
-                justifyContent: "center",
-                borderRadius: "10px",
+                justifyContent: "flex-start",
+                width: "90%",
               }}
             >
-              2020
-            </Box>
-            <Box
-              sx={{
-                // outline: "2px solid red",
-                display: "flex",
-                justifyContent: "center",
-                width: "70%",
-              }}
-            >
-              Dashboard
+              <i>{props.workKeywords}</i>
             </Box>
           </Box>
           <Box
             sx={{
               // outline: "2px solid red",
               height: "55%",
+              paddingRight: "5px",
             }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            mollitia nesciunt magni culpa quidem libero corrupti eius quod
-            maxime porro, aliquam rerum voluptatem molestiae delectus corporis,
-            repellat quaerat excepturi nam.
+            {props.workDesc}
           </Box>
           <Box
           // style={{

@@ -1,0 +1,64 @@
+[
+    
+    {
+     "id": "1",
+     "src": "Todo",
+     "title": "Todo App",
+     "desc": "The classic todo app with a few twists! This app includes a dark/light theme toggle and drag & drop reordering for anyone wanting an extra test. This project demonstrated deep knowledge in react hooks. The user is able to add new todos to the list, mark todos as complete, delete todos from the list, filter by all/active/complete todos, clear all completed todos, and toggle light and dark mode ",
+     "keyword":
+       "HTML5, CSS, React.js, Git & Git-Hub, Styled-components & Material UI",
+     "link": "https://dacooleric-todo-app.netlify.app/",
+     "code": "https://github.com/daCoolEric/Todo-app-react"
+   },
+    {
+     "id": "2",
+     "src": "ProductPage",
+     "title": "Product Page",
+     "desc": "A beautiful realisitic product page to demonstrate state management, resusability of components, responsive design, and efficient website layout. With this interface, the user is able to view the optimal layout for the site depending on their device's screen size, see hover states for all interactive elements on the page, open a lightbox gallery by clicking on the large product image, switch the large product image by clicking on the small thumbnail images, add items to the cart, and view the cart and remove items from it",
+     "keyword":
+       "HTML5, CSS, React.js, Material UI, Git & Git-Hub",
+     "link": "https//blablabla",
+     "code": "https//blablabla"
+   },
+   {
+     "id": "3",
+     "src": "WeatherApp",
+     "title": "Weather App",
+     "desc": "An aesthetic user-friendly app with some cool features for determining the current weather of any location and also forecasting weather conditions. The project demonsrates deep knowledge in APIs and how to consume them. The cool features include realtime weather for almost any location in the world, location details (like precipitation, humidity, wind speed, uv index and more), weather forecast for 7 days, and option to add other locations",
+     "keyword":
+       "HTML5, React.js, SCSS, Material UI",
+     "link": "https://dacooleric-weather-app.netlify.app/",
+     "code": "https://github.com/daCoolEric/weather-app"
+   },
+   {
+     "id": "4",
+     "src": "MovieApp",
+     "title": "Movie App",
+     "desc": "A app to show data about popular, trending, upcoming movies & tv shows and much more. The project demonstrates deep knowledge in APIs and how to consume them. The features of the app includes upcoming, trending, popular and top-rated movies & tv-shows, movies & tv-shows by specific genres, search movies & tv-shows, details about movies & tv-shows like cast, crew, videos, overview and more, view cast or crew details ",
+     "keyword":
+       "React.js, SCSS, Redux, React-Router, TMDB-api, Git & Git-Hub",
+     "link": "https//blablabla",
+     "code": "https//blablabla"
+  },
+    {
+     "id": "5",
+     "src": "Calc",
+     "title": "Simple Calculator",
+     "desc": "This project aims at demonstrating logic, and use of Grid in CSS. The app comes with some cool features. The end-user is able to See the size of the elements adjust based on their device's screen size, perform mathematical operations like addition, subtraction, multiplication, and division, adjust the color theme based on their preference, have their initial theme preference checked using prefers-color-scheme and have any additional changes saved in the browser",
+     "keyword":
+       "HTML5, CSS, FlexBox, CSS Grid, Mobile-First Workflow, & Git & Git-Hub",
+     "link": "https://dacooleric-calc.netlify.app/",
+     "code": "https://github.com/daCoolEric/Simple-Calc"
+   },
+   {
+     "id": "6",
+     "src": "Graphic",
+     "title": "Graphic Design",
+     "desc": "An ongoing activity where I design call cards, brochures, posters, logos, flyers, banners, magazines, mockups, user-interfaces and many more for clients. I make professional designs whiles taking into consideration the key elements of visual design namely Contrast, Balance, Emphasis, Movement, White Space, Proportion, Hierarchy, Repetition, Rhythm, Pattern, Unity, and Variety.  ",
+     "keyword":
+       "Figma, Adobe Photoshop, Adobe Illustrator, Adobe Indesign, Adobe XD, Adobe Lightroom. ",
+     "link": "https//blablabla",
+     "code": "https//blablabla"
+   }
+ 
+]

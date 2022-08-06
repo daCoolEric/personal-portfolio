@@ -7,9 +7,31 @@ import ProductPage from "../../images/productPage.png";
 import WeatherApp from "../../images/weatherApp.png";
 
 function WorkCard(props) {
+  const color = props.workDateColor;
+  // let color;
+  // const getBgColor = () => {
+  //   if (props.id === "1") {
+  //     color = "primary.todo";
+  //   } else if (props.id === "2") {
+  //     color = "primary.product";
+  //   } else if (props.id === "3") {
+  //     color = "primary.weather";
+  //   } else {
+  //     color = "";
+  //   }
+  // props.id === "1"
+  //   ? (color = "primary.todo")
+  //   : props.id === "2"
+  //   ? (color = "primary.product")
+  //   : props.id === "3"
+  //   ? (color = "primary.weather")
+  //   : null;
+  // };
+
   return (
     <>
       {/* Mobile View */}
+
       <Container
         maxWidth="sm"
         sx={{
@@ -68,18 +90,12 @@ function WorkCard(props) {
               sx={{
                 fontWeight: "600",
                 fontSize: "20px",
+                color: { color },
               }}
             >
-              {props.id === "1"
-                ? props.workTitle
-                : props.id === "2"
-                ? props.workTitle
-                : props.id === "3"
-                ? props.workTitle
-                : props.id === "4"
-                ? props.workTitle
-                : null}
+              {props.workTitle}
             </Box>
+
             <Box
               sx={{
                 //outline: "2px solid red",
@@ -92,21 +108,56 @@ function WorkCard(props) {
                 paddingBottom: "5px",
               }}
             >
-              <Box
-                sx={{
-                  // outline: "2px solid red",
-                  backgroundColor: "#000",
-                  color: "#fff",
-                  width: "50px",
-                  height: "25px",
-                  display: "flex",
-                  justifyContent: "center",
+              {props.id === "1" ? (
+                <Box
+                  sx={{
+                    //outline: "2px solid red",
+                    backgroundColor: "primary.todo",
+                    color: "#fff",
+                    width: "50px",
+                    height: "25px",
+                    display: "flex",
+                    justifyContent: "center",
 
-                  borderRadius: "10px",
-                }}
-              >
-                2020
-              </Box>
+                    borderRadius: "10px",
+                  }}
+                >
+                  {props.workDate}
+                </Box>
+              ) : props.id === "2" ? (
+                <Box
+                  sx={{
+                    //outline: "2px solid red",
+                    backgroundColor: "primary.product",
+                    color: "#fff",
+                    width: "50px",
+                    height: "25px",
+                    display: "flex",
+                    justifyContent: "center",
+
+                    borderRadius: "10px",
+                  }}
+                >
+                  {props.workDate}
+                </Box>
+              ) : props.id === "3" ? (
+                <Box
+                  sx={{
+                    //outline: "2px solid red",
+                    backgroundColor: "primary.weather",
+                    color: "#fff",
+                    width: "50px",
+                    height: "25px",
+                    display: "flex",
+                    justifyContent: "center",
+
+                    borderRadius: "10px",
+                  }}
+                >
+                  {props.workDate}
+                </Box>
+              ) : null}
+
               <Box
                 sx={{
                   //outline: "2px solid red",
@@ -115,33 +166,17 @@ function WorkCard(props) {
                   width: "80%",
                 }}
               >
-                {props.id === "1"
-                  ? props.workKeywords
-                  : props.id === "2"
-                  ? props.workKeywords
-                  : props.id === "3"
-                  ? props.workKeywords
-                  : props.id === "4"
-                  ? props.workKeywords
-                  : null}
+                <i>{props.workKeywords}</i>
               </Box>
             </Box>
             <Box
               sx={{
                 //outline: "2px solid red",
                 height: "65%",
-                width: "90%",
+                width: "100%",
               }}
             >
-              {props.id === "1"
-                ? props.workDesc
-                : props.id === "2"
-                ? props.workDesc
-                : props.id === "3"
-                ? props.workDesc
-                : props.id === "4"
-                ? props.workDesc
-                : null}
+              {props.workDesc}
             </Box>
             <Box
             // style={{
@@ -220,15 +255,7 @@ function WorkCard(props) {
                 fontSize: "20px",
               }}
             >
-              {props.id === "1"
-                ? props.workTitle
-                : props.id === "2"
-                ? props.workTitle
-                : props.id === "3"
-                ? props.workTitle
-                : props.id === "4"
-                ? props.workTitle
-                : null}
+              {props.workTitle}
             </Box>
             <Box
               sx={{
@@ -252,7 +279,7 @@ function WorkCard(props) {
                   borderRadius: "10px",
                 }}
               >
-                2020
+                {props.workDate}
               </Box>
               <Box
                 sx={{
@@ -263,32 +290,17 @@ function WorkCard(props) {
                   width: "95%",
                 }}
               >
-                {props.id === "1"
-                  ? props.workKeywords
-                  : props.id === "2"
-                  ? props.workKeywords
-                  : props.id === "3"
-                  ? props.workKeywords
-                  : props.id === "4"
-                  ? props.workKeywords
-                  : null}
+                <i>{props.workKeywords}</i>
               </Box>
             </Box>
             <Box
               sx={{
                 // outline: "2px solid red",
                 height: "55%",
+                width: "100%",
               }}
             >
-              {props.id === "1"
-                ? props.workDesc
-                : props.id === "2"
-                ? props.workDesc
-                : props.id === "3"
-                ? props.workDesc
-                : props.id === "4"
-                ? props.workDesc
-                : null}
+              {props.workDesc}
             </Box>
             <Box
             // style={{

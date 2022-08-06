@@ -3,6 +3,7 @@ import WorkCard from "./WorkCard";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import { Box } from "@mui/material";
+
 import WorkData from "./WD.json";
 
 function Works() {
@@ -53,6 +54,8 @@ function Works() {
                   workTitle={work.title}
                   workDesc={work.desc}
                   workKeywords={work.keywords}
+                  workDate={work.date}
+                  workDateColor={work.color}
                 />
                 <Divider variant="fullwidth" />
               </>
