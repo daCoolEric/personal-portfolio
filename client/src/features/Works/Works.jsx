@@ -3,6 +3,7 @@ import WorkCard from "./WorkCard";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import { Box } from "@mui/material";
+import Link from "@mui/material/Link";
 
 import WorkData from "./WD.json";
 
@@ -31,7 +32,9 @@ function Works() {
           }}
         >
           <Box style={{ color: "#21243D" }}>Featured Works</Box>
-          <Box style={{ color: "#00A8CC", cursor: "pointer" }}>View all</Box>
+          <Link href="/works" underline="none">
+            <Box style={{ color: "#00A8CC", cursor: "pointer" }}>View all</Box>
+          </Link>
         </Box>
         <Box
           sx={{
@@ -50,7 +53,7 @@ function Works() {
                 <WorkCard
                   key={work.id}
                   id={work.id}
-                  // workImg={work.src}
+                  workName={work.name}
                   workTitle={work.title}
                   workDesc={work.desc}
                   workKeywords={work.keywords}
@@ -86,7 +89,9 @@ function Works() {
           }}
         >
           <Box style={{ color: "#21243D" }}>Featured Works</Box>
-          <Box style={{ color: "#00A8CC", cursor: "pointer" }}>View all</Box>
+          <Link href="/works" underline="none">
+            <Box style={{ color: "#00A8CC", cursor: "pointer" }}>View all</Box>
+          </Link>
         </Box>
         <Box
           sx={{
@@ -105,7 +110,7 @@ function Works() {
                 <WorkCard
                   key={work.id}
                   id={work.id}
-                  // workImg={work.src}
+                  workName={work.name}
                   workTitle={work.title}
                   workDesc={work.desc}
                   workKeywords={work.keywords}

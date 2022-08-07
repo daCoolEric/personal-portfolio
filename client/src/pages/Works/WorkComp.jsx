@@ -7,6 +7,7 @@ import ProductPage from "../../images/productPage.png";
 import WeatherApp from "../../images/weatherApp.png";
 import Calc from "../../images/calc.png";
 import Graphic from "../../images/graphic.png";
+import { Link, useParams } from "react-router-dom";
 
 function workComp(props) {
   const color = props.workDateColor;
@@ -203,18 +204,20 @@ function workComp(props) {
             //   outline: "2px solid red",
             // }}
             >
-              <Box
-                sx={{
-                  // outline: "2px solid red",
-                  color: "#00A8CC",
-                  width: "35%",
-                  float: "right",
-                  cursor: "pointer",
-                  paddingBottom: "10px",
-                }}
-              >
-                Read more
-              </Box>
+              <Link to={`/works/${props.workName}`} underline="none">
+                <Box
+                  sx={{
+                    // outline: "2px solid red",
+                    color: "#00A8CC",
+                    width: "35%",
+                    float: "right",
+                    cursor: "pointer",
+                    paddingBottom: "10px",
+                  }}
+                >
+                  Read more
+                </Box>
+              </Link>
             </Box>
           </Box>
         </Paper>
@@ -395,17 +398,19 @@ function workComp(props) {
           //   outline: "2px solid red",
           // }}
           >
-            <Box
-              sx={{
-                // outline: "2px solid red",
-                color: "#00A8CC",
-                width: "20%",
-                float: "right",
-                cursor: "pointer",
-              }}
-            >
-              Read more
-            </Box>
+            <Link to={`/works/${props.workName}`} underline="none">
+              <Box
+                sx={{
+                  // outline: "2px solid red",
+                  color: "#00A8CC",
+                  width: "20%",
+                  float: "right",
+                  cursor: "pointer",
+                }}
+              >
+                Read more
+              </Box>
+            </Link>
           </Box>
         </Box>
       </Paper>

@@ -2,6 +2,7 @@
     
        {
         "id": "1",
+        "name": "todo-app",
         "title": "Todo App",
         "desc": "The classic todo app with a few twists! This app includes a dark/light theme toggle and drag & drop reordering for anyone wanting an extra test. ",
         "keywords":
@@ -11,6 +12,7 @@
       },
        {
         "id": "2",
+        "name": "product-page",
         "title": "Product Page",
         "desc": "A beautiful realisitic product page to demonstrate state management, resusability of components, responsive design, and efficient website layout. ",
         "keywords":
@@ -20,6 +22,7 @@
       },
       {
         "id": "3",
+        "name": "weather-app",
         "title": "Weather App",
         "desc": "An aesthetic user-friendly app with some cool features for determining the current weather of any location and also forecasting weather conditions. ",
         "keywords":

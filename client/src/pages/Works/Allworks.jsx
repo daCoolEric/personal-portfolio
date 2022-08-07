@@ -24,6 +24,7 @@ export default function MiddleDividers() {
             <WorkComp
               key={work.id}
               id={work.id}
+              workName={work.name}
               workTitle={work.title}
               workDesc={work.desc}
               workKeywords={work.keywords}
@@ -34,13 +35,6 @@ export default function MiddleDividers() {
           </>
         );
       })}
-      {/* <WorkComp />
-      <Divider variant="middle" sx={sx} />
-      <WorkComp />
-      <Divider variant="middle" sx={sx} />
-      <WorkComp />
-      <Divider variant="middle" sx={sx} />
-      <WorkComp /> */}
     </Container>
   );
 }

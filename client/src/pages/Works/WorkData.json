@@ -2,6 +2,7 @@
     
   {
    "id": "1",
+   "name": "todo-app",
    "title": "Todo App",
    "desc": "The classic todo app with a few twists! This app includes a dark/light theme toggle and drag & drop reordering for anyone wanting an extra test. ",
    "keywords":
@@ -11,6 +12,7 @@
  },
   {
    "id": "2",
+   "name": "product-page",
    "title": "Product Page",
    "desc": "A beautiful realisitic product page to demonstrate state management, resusability of components, responsive design, and efficient website layout. ",
    "keywords":
@@ -20,6 +22,7 @@
  },
  {
    "id": "3",
+   "name": "weather-app",
    "title": "Weather App",
    "desc": "An aesthetic user-friendly app with some cool features for determining the current weather of any location and also forecasting weather conditions. ",
    "keywords":
@@ -29,6 +32,7 @@
  },
  {
   "id": "4",
+  "name": "movie-app",
   "title": "Movie App",
   "desc": "A app to show data about popular, trending, upcoming movies & tv shows and much more. The project demonstrates deep knowledge in APIs and how to consume them. ",
   "keywords":
@@ -38,6 +42,7 @@
 },
 {
   "id": "5",
+  "name": "calculator",
   "title": "Calculator App",
   "desc": "This project aims at demonstrating logic, and use of Grid in CSS. The app comes with some cool features. The end-user is able to See the size of the elements adjust based on their device's screen size, ",
   "keywords":
@@ -47,6 +52,7 @@
 },
 {
   "id": "6",
+  "name": "graphic-design",
   "title": "Graphic Design",
   "desc": "An ongoing activity where I design call cards, brochures, posters, logos, flyers, banners, magazines, mockups, user-interfaces and many more for clients. ",
   "keywords":

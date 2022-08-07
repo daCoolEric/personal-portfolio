@@ -5,28 +5,10 @@ import Todo from "../../images/todoApp.png";
 import MovieApp from "../../images/movieApp.png";
 import ProductPage from "../../images/productPage.png";
 import WeatherApp from "../../images/weatherApp.png";
+import Link from "@mui/material/Link";
 
 function WorkCard(props) {
   const color = props.workDateColor;
-  // let color;
-  // const getBgColor = () => {
-  //   if (props.id === "1") {
-  //     color = "primary.todo";
-  //   } else if (props.id === "2") {
-  //     color = "primary.product";
-  //   } else if (props.id === "3") {
-  //     color = "primary.weather";
-  //   } else {
-  //     color = "";
-  //   }
-  // props.id === "1"
-  //   ? (color = "primary.todo")
-  //   : props.id === "2"
-  //   ? (color = "primary.product")
-  //   : props.id === "3"
-  //   ? (color = "primary.weather")
-  //   : null;
-  // };
 
   return (
     <>
@@ -183,18 +165,20 @@ function WorkCard(props) {
             //   outline: "2px solid red",
             // }}
             >
-              <Box
-                sx={{
-                  // outline: "2px solid red",
-                  color: "#00A8CC",
-                  width: "35%",
-                  float: "right",
-                  cursor: "pointer",
-                  paddingBottom: "10px",
-                }}
-              >
-                Read more
-              </Box>
+              <Link href={`/works/${props.workName}`} underline="none">
+                <Box
+                  sx={{
+                    // outline: "2px solid red",
+                    color: "#00A8CC",
+                    width: "35%",
+                    float: "right",
+                    cursor: "pointer",
+                    paddingBottom: "10px",
+                  }}
+                >
+                  Read more
+                </Box>
+              </Link>
             </Box>
           </Box>
         </Paper>
@@ -307,17 +291,19 @@ function WorkCard(props) {
             //   outline: "2px solid red",
             // }}
             >
-              <Box
-                sx={{
-                  // outline: "2px solid red",
-                  color: "#00A8CC",
-                  width: "20%",
-                  float: "right",
-                  cursor: "pointer",
-                }}
-              >
-                Read more
-              </Box>
+              <Link href={`/works/${props.workName}`} underline="none">
+                <Box
+                  sx={{
+                    // outline: "2px solid red",
+                    color: "#00A8CC",
+                    width: "20%",
+                    float: "right",
+                    cursor: "pointer",
+                  }}
+                >
+                  Read more
+                </Box>
+              </Link>
             </Box>
           </Box>
         </Paper>
