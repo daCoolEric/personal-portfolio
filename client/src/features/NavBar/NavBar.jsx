@@ -1,21 +1,18 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
-import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
+import { NavLink } from "react-router-dom";
 
 const pages = [
-  { name: "About", link: "/about" },
-  { name: "Works", link: "/works" },
-  { name: "Blog", link: "/blog" },
-  { name: "Contact", link: "/contact" },
+  { name: "About", changeColorName: "about", link: "/about" },
+  { name: "Works", changeColorName: "work", link: "/works" },
+  { name: "Blog", changeColorName: "blog", link: "/blog" },
+  { name: "Contact", changeColorName: "contact", link: "/contact" },
 ];
 
 const NavBar = () => {
@@ -27,6 +24,27 @@ const NavBar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const navBarStyles = ({ isActive }) => {
+    return {
+      textDecoration: "none",
+      fontSize: "17px",
+      fontWeight: "600",
+      color: isActive ? "#f0860c" : "#454",
+    };
+  };
+
+  const navBarDesktopStyles = ({ isActive }) => {
+    return {
+      display: "block",
+      fontWeight: "700",
+      textDecoration: "none",
+      color: isActive ? "#f0860c" : "#454",
+      marginRight: "15px",
+      marginLeft: "15px",
+    };
+  };
+
   return (
     <>
       <AppBar
@@ -74,7 +92,8 @@ const NavBar = () => {
                     overflow: "visible",
                     filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
                     mt: 1.5,
-                    width: "300px",
+                    width: "200px",
+                    height: "29vh",
                     "& .MuiAvatar-root": {
                       width: 32,
                       height: 32,
@@ -98,81 +117,88 @@ const NavBar = () => {
                 transformOrigin={{ horizontal: "right", vertical: "top" }}
                 anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
               >
-                <MenuItem>
+                <div
+                  style={{
+                    //outline: "2px solid green",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    paddingTop: "10px",
+                    paddingBottom: "10px",
+                  }}
+                >
                   {" "}
-                  <Link
-                    href="/"
-                    color="black"
-                    underline="none"
-                    sx={{
-                      textAlign: "center",
-                      width: "100%",
-                    }}
-                  >
+                  <NavLink to="/" style={navBarStyles}>
                     Home{" "}
-                  </Link>{" "}
-                </MenuItem>
-                <MenuItem>
+                  </NavLink>{" "}
+                </div>
+                <div
+                  style={{
+                    //outline: "2px solid green",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    paddingTop: "10px",
+                    paddingBottom: "10px",
+                  }}
+                >
                   {" "}
-                  <Link
-                    href="/about"
-                    color="black"
-                    underline="none"
-                    sx={{
-                      textAlign: "center",
-                      width: "100%",
-                    }}
-                  >
+                  <NavLink to="/about" style={navBarStyles}>
                     About{" "}
-                  </Link>{" "}
-                </MenuItem>
-                <MenuItem>
+                  </NavLink>{" "}
+                </div>
+                <div
+                  style={{
+                    //outline: "2px solid green",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    paddingTop: "10px",
+                    paddingBottom: "10px",
+                  }}
+                >
                   {" "}
-                  <Link
-                    href="/works"
-                    color="black"
-                    underline="none"
-                    sx={{
-                      textAlign: "center",
-                      width: "100%",
-                    }}
-                  >
+                  <NavLink to="/works" style={navBarStyles}>
                     Works{" "}
-                  </Link>{" "}
-                </MenuItem>
-                <MenuItem>
+                  </NavLink>{" "}
+                </div>
+                <div
+                  style={{
+                    //outline: "2px solid green",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    paddingTop: "10px",
+                    paddingBottom: "10px",
+                  }}
+                >
                   {" "}
-                  <Link
-                    href="/blog"
-                    color="black"
-                    underline="none"
-                    sx={{
-                      textAlign: "center",
-                      width: "100%",
-                    }}
-                  >
+                  <NavLink to="/blog" style={navBarStyles}>
                     Blog{" "}
-                  </Link>{" "}
-                </MenuItem>
-                <MenuItem>
+                  </NavLink>{" "}
+                </div>
+                <div
+                  style={{
+                    //outline: "2px solid green",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    paddingTop: "10px",
+                    paddingBottom: "10px",
+                  }}
+                >
                   {" "}
-                  <Link
-                    href="/contact"
-                    color="black"
-                    underline="none"
-                    sx={{
-                      textAlign: "center",
-                      width: "100%",
-                    }}
-                  >
+                  <NavLink to="/contact" color="black" style={navBarStyles}>
                     Contact{" "}
-                  </Link>{" "}
-                </MenuItem>
+                  </NavLink>{" "}
+                </div>
               </Menu>
             </Box>
+            {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
 
-            <Box
-              sx={{
+            {/* Desktop */}
+            <div
+              style={{
                 //outline: "2px solid red",
                 display: "flex",
                 flexDirection: "row",
@@ -180,26 +206,31 @@ const NavBar = () => {
                 width: "30%",
               }}
             >
-              <Link href="/" underline="none">
-                <Button
+              <Box
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                }}
+              >
+                <NavLink to="/" style={navBarDesktopStyles}>
+                  {/* <Button
                   sx={{
                     my: 2,
-
-                    color: "#FF6464",
                     display: "block",
                     fontWeight: "700",
+                    textDecoration: "none",
                     display: { xs: "none", md: "flex" },
                   }}
-                >
+                > */}
                   Home
-                </Button>
-              </Link>
-            </Box>
-            <Box>
+                  {/* </Button> */}
+                </NavLink>
+              </Box>
+            </div>
+            <div>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                 {pages.map((page) => (
-                  <Link href={page.link} underline="none">
-                    <Button
+                  <NavLink to={page.link} style={navBarDesktopStyles}>
+                    {/* <Button
                       key={page.name}
                       sx={{
                         my: 2,
@@ -207,13 +238,13 @@ const NavBar = () => {
                         display: "block",
                         fontWeight: "700",
                       }}
-                    >
-                      {page.name}
-                    </Button>
-                  </Link>
+                    > */}
+                    {page.name}
+                    {/* </Button> */}
+                  </NavLink>
                 ))}
               </Box>
-            </Box>
+            </div>
           </Toolbar>
         </Container>
       </AppBar>

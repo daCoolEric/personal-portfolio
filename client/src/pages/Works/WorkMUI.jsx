@@ -101,7 +101,6 @@ function WorkMUI() {
             <Box
               sx={{
                 //outline: "2px solid yellow",
-                width: "50%",
                 display: "flex",
                 justifyContent: "center",
                 width: "200px",

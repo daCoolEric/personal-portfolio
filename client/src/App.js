@@ -1,4 +1,5 @@
 // import { Counter } from "./features/counter/Counter";
+
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./features/NavBar/NavBar";
 import Home from "./pages/Home/Home";
