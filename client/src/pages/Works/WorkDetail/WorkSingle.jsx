@@ -1,6 +1,6 @@
 import { Container, Box } from "@mui/material";
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Todo from "../../../images/todoApp.png";
 import MovieApp from "../../../images/movieApp.png";
 import ProductPage from "../../../images/productPage.png";
@@ -10,7 +10,8 @@ import Graphic from "../../../images/graphic.png";
 import WorkDetailData from "./WorkDetail.json";
 
 function WorkSingle(props) {
-  const { name } = useParams();
+  const color = props.specificWorkColor;
+  // const { name } = useParams();
   return (
     <>
       <Box sx={{ paddingTop: "80px" }}>
@@ -21,6 +22,9 @@ function WorkSingle(props) {
                 marginBottom: "25px",
                 width: "100%",
                 textAlign: "center",
+                fontWeight: "600",
+                fontSize: "25px",
+                color: { color },
               }}
             >
               {WorkDetailData[props.specificWorkId].title}
@@ -82,20 +86,98 @@ function WorkSingle(props) {
                     paddingBottom: "5px",
                   }}
                 >
-                  <Box
-                    sx={{
-                      // outline: "2px solid red",
-                      backgroundColor: "#000",
-                      color: "#fff",
-                      width: "50px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      borderRadius: "10px",
-                    }}
-                  >
-                    {WorkDetailData[props.specificWorkId].date}
-                  </Box>
+                  {props.specificWorkId === "0" ? (
+                    <Box
+                      sx={{
+                        // outline: "2px solid red",
+                        backgroundColor: "primary.todo",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "1" ? (
+                    <Box
+                      sx={{
+                        // outline: "2px solid red",
+                        backgroundColor: "primary.product",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "2" ? (
+                    <Box
+                      sx={{
+                        // outline: "2px solid red",
+                        backgroundColor: "primary.weather",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "3" ? (
+                    <Box
+                      sx={{
+                        // outline: "2px solid red",
+                        backgroundColor: "primary.movie",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "4" ? (
+                    <Box
+                      sx={{
+                        // outline: "2px solid red",
+                        backgroundColor: "primary.calc",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "5" ? (
+                    <Box
+                      sx={{
+                        // outline: "2px solid red",
+                        backgroundColor: "primary.graphic",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : null}
+
                   <Box
                     sx={{
                       //outline: "2px solid red",
@@ -144,7 +226,14 @@ function WorkSingle(props) {
         {/* Desktop */}
         <Box id="desktop" sx={{ display: { xs: "none", md: "flex" } }}>
           <Container maxWidth="md">
-            <Box sx={{ marginBottom: "25px" }}>
+            <Box
+              sx={{
+                marginBottom: "25px",
+                fontWeight: "600",
+                fontSize: "25px",
+                color: { color },
+              }}
+            >
               {WorkDetailData[props.specificWorkId].title}
             </Box>
             <Box
@@ -196,32 +285,113 @@ function WorkSingle(props) {
                     //outline: "2px solid red",
                     display: "flex",
                     flexDirection: "row",
-                    width: "30%",
+                    width: "100%",
                     justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                 >
+                  {props.specificWorkId === "0" ? (
+                    <Box
+                      sx={{
+                        //outline: "2px solid red",
+                        backgroundColor: "primary.todo",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "1" ? (
+                    <Box
+                      sx={{
+                        //outline: "2px solid red",
+                        backgroundColor: "primary.product",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "2" ? (
+                    <Box
+                      sx={{
+                        //outline: "2px solid red",
+                        backgroundColor: "primary.weather",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "3" ? (
+                    <Box
+                      sx={{
+                        //outline: "2px solid red",
+                        backgroundColor: "primary.movie",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "4" ? (
+                    <Box
+                      sx={{
+                        //outline: "2px solid red",
+                        backgroundColor: "primary.calc",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : props.specificWorkId === "5" ? (
+                    <Box
+                      sx={{
+                        //outline: "2px solid red",
+                        backgroundColor: "primary.graphic",
+                        color: "#fff",
+                        width: "50px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      {WorkDetailData[props.specificWorkId].date}
+                    </Box>
+                  ) : null}
+
                   <Box
                     sx={{
                       // outline: "2px solid red",
-                      backgroundColor: "#000",
-                      color: "#fff",
-                      width: "50px",
                       display: "flex",
-                      justifyContent: "center",
-                      borderRadius: "10px",
+                      justifyContent: "flex-start",
+                      width: "88%",
+                      marginBottom: "10px",
                     }}
                   >
-                    {WorkDetailData[props.specificWorkId].date}
-                  </Box>
-                  <Box
-                    sx={{
-                      // outline: "2px solid red",
-                      display: "flex",
-                      justifyContent: "center",
-                      width: "70%",
-                    }}
-                  >
-                    {WorkDetailData[props.specificWorkId].keyword}
+                    <i>{WorkDetailData[props.specificWorkId].keyword}</i>
                   </Box>
                 </Box>
                 <Box

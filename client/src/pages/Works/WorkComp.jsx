@@ -7,7 +7,7 @@ import ProductPage from "../../images/productPage.png";
 import WeatherApp from "../../images/weatherApp.png";
 import Calc from "../../images/calc.png";
 import Graphic from "../../images/graphic.png";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function workComp(props) {
   const color = props.workDateColor;
