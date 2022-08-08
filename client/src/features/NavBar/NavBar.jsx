@@ -89,11 +89,13 @@ const NavBar = () => {
                 PaperProps={{
                   elevation: 0,
                   sx: {
+                    display: "flex",
+                    justifyContent: "space-evenly",
                     overflow: "visible",
                     filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
                     mt: 1.5,
                     width: "300px",
-                    height: "40vh",
+                    height: "45vh",
                     "& .MuiAvatar-root": {
                       width: 32,
                       height: 32,
@@ -123,8 +125,8 @@ const NavBar = () => {
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
-                    paddingTop: "10px",
-                    paddingBottom: "10px",
+                    paddingTop: "15px",
+                    paddingBottom: "15px",
                   }}
                 >
                   {" "}
@@ -138,8 +140,8 @@ const NavBar = () => {
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
-                    paddingTop: "10px",
-                    paddingBottom: "10px",
+                    paddingTop: "15px",
+                    paddingBottom: "15px",
                   }}
                 >
                   {" "}
@@ -153,8 +155,8 @@ const NavBar = () => {
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
-                    paddingTop: "10px",
-                    paddingBottom: "10px",
+                    paddingTop: "15px",
+                    paddingBottom: "15px",
                   }}
                 >
                   {" "}
@@ -168,8 +170,8 @@ const NavBar = () => {
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
-                    paddingTop: "10px",
-                    paddingBottom: "10px",
+                    paddingTop: "15px",
+                    paddingBottom: "15px",
                   }}
                 >
                   {" "}
@@ -183,8 +185,8 @@ const NavBar = () => {
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
-                    paddingTop: "10px",
-                    paddingBottom: "10px",
+                    paddingTop: "15px",
+                    paddingBottom: "15px",
                   }}
                 >
                   {" "}
