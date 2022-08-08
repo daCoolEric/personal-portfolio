@@ -1,6 +1,7 @@
 import React from "react";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
+import { NavLink } from "react-router-dom";
 
 function BlogCard() {
   return (

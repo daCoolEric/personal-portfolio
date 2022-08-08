@@ -100,7 +100,8 @@ function Header() {
                   },
                 }}
               >
-                <b>Download Resume</b>
+                 <NavLink to="./EricAyi_CV.pdf" target="_blank"
+            download style={{color: "#fff", textDecoration: "none"}}><b>Download Resume</b></NavLink>
               </Button>
             </Box>
           </Box>
@@ -263,7 +264,9 @@ function Header() {
                     },
                   }}
                 >
-                  <b>Download Resume</b>
+                  <NavLink to="./EricAyi_CV.pdf" target="_blank"
+            download style={{color: "#fff", textDecoration: "none"}}><b>Download Resume</b></NavLink>
+                  
                 </Button>
               </Box>
             </Box>

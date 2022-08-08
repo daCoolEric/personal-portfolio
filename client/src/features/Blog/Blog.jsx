@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import BlogCardMobile from "./BlogCardMobile";
 import BlogCardDesktop from "./BlogCardDesktop";
+import { NavLink } from "react-router-dom";
 
 function Blog() {
   return (
@@ -39,7 +40,14 @@ function Blog() {
           }}
         >
           <Box sx={{ color: "#21243D" }}>Recent posts</Box>
-          <Box sx={{ color: "#00A8CC", cursor: "pointer" }}>View all</Box>
+          <Box sx={{ cursor: "pointer" }}>
+            <NavLink
+              to="/blog"
+              style={{ color: "#00A8CC", textDecoration: "none" }}
+            >
+              View all
+            </NavLink>
+          </Box>
         </Box>
 
         <Box
@@ -136,7 +144,14 @@ function Blog() {
             }}
           >
             <Box sx={{ color: "#21243D" }}>Recent posts</Box>
-            <Box sx={{ color: "#00A8CC", cursor: "pointer" }}>View all</Box>
+            <Box sx={{ cursor: "pointer" }}>
+              <NavLink
+                to="/blog"
+                style={{ color: "#00A8CC", textDecoration: "none" }}
+              >
+                View all
+              </NavLink>
+            </Box>
           </Box>
 
           <Box
