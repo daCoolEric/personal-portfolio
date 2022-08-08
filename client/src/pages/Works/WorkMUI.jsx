@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import WorkHeaderInfo from "./WorkHeader.json";
 import profilePic from "../../images/eric-420px.png";
 import { Box, Typography } from "@mui/material";
-import Link from "@mui/material/Link";
+import { NavLink } from "react-router-dom";
 
 function WorkMUI() {
   return (
@@ -77,9 +77,12 @@ function WorkMUI() {
                   },
                 }}
               >
-                <Link href="/works/workdetails" underline="none" color="#fff">
+                <NavLink
+                  to="/works"
+                  style={{ color: "#fff", textDecoration: "none" }}
+                >
                   <b>Learn More</b>
-                </Link>
+                </NavLink>
               </Button>
 
               <Button
@@ -114,6 +117,7 @@ function WorkMUI() {
         </Box>
         {/* Mobile view */}
         <Box
+          id="work-section"
           display={{ xs: "flex", md: "none" }}
           flexDirection="column"
           justifyContent="center"
@@ -227,9 +231,12 @@ function WorkMUI() {
                     },
                   }}
                 >
-                  <Link href="#" underline="none" color="#fff">
+                  <NavLink
+                    to="#"
+                    style={{ color: "#fff", textDecoration: "none" }}
+                  >
                     <b>Learn More</b>
-                  </Link>
+                  </NavLink>
                 </Button>
                 <Button
                   sx={{

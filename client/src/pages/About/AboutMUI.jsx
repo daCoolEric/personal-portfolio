@@ -1,11 +1,17 @@
 import React from "react";
-import Header from "../../features/Header/Header";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import AboutInfo from "./About.json";
 import profilePic from "../../images/eric-420px.png";
 import { Box, Typography } from "@mui/material";
-import Link from "@mui/material/Link";
+import { NavLink } from "react-router-dom";
+
+const aboutStyles = ({ isActive }) => {
+  return {
+    color: "#fff",
+    textDecoration: "none",
+  };
+};
 
 function AboutMUI() {
   return (
@@ -132,9 +138,9 @@ function AboutMUI() {
                   },
                 }}
               >
-                <Link href="/works" color="#fff" underline="none">
+                <NavLink to="/works" style={aboutStyles}>
                   <b>Check them out</b>
-                </Link>
+                </NavLink>
               </Button>
 
               <Button
@@ -157,7 +163,6 @@ function AboutMUI() {
               sx={{
                 //outline: "2px solid yellow",
                 height: "100%",
-                width: "50%",
                 display: "flex",
                 justifyContent: "center",
                 width: "200px",
@@ -323,9 +328,12 @@ function AboutMUI() {
                     },
                   }}
                 >
-                  <Link href="/works" color="#fff" underline="none">
+                  <NavLink to="/works" style={aboutStyles}>
                     <b>Check them out</b>
-                  </Link>
+                  </NavLink>
+                  {/* <Link href="/works" color="#fff" underline="none">
+                    
+                  </Link> */}
                 </Button>
                 <Button
                   sx={{

@@ -4,7 +4,8 @@ import Button from "@mui/material/Button";
 import HeaderInfo from "./Header.json";
 import profilePic from "../../images/eric-420px.png";
 import { Box, Typography } from "@mui/material";
-import Link from "@mui/material/Link";
+import { NavLink } from "react-router-dom";
+
 
 function Header() {
   return (
@@ -86,9 +87,7 @@ function Header() {
                   },
                 }}
               >
-                <Link href="/about" underline="none" color="#fff">
-                  <b>Learn More</b>
-                </Link>
+                <NavLink to="/about" style={{color: "#fff", textDecoration: "none"}}> <b>Learn More</b></NavLink>
               </Button>
 
               <Button
@@ -110,7 +109,6 @@ function Header() {
             <Box
               sx={{
                 //outline: "2px solid yellow",
-                width: "50%",
                 display: "flex",
                 justifyContent: "center",
                 width: "200px",
@@ -251,9 +249,8 @@ function Header() {
                     },
                   }}
                 >
-                  <Link href="/about" underline="none" color="#fff">
-                    <b>Learn More</b>
-                  </Link>
+                  <NavLink to="/about" style={{color: "#fff", textDecoration: "none"}}> <b>Learn More</b></NavLink>
+                  
                 </Button>
                 <Button
                   sx={{
